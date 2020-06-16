@@ -206,10 +206,21 @@ class Board{
 		}
 };
 
+int getUserInput(int currentPlayer){
+	int userInp;
+	cout << "Player " << currentPlayer << ", choose a block: ";
+	scanf("%d", &userInp);
+
+	if(userInp > 9 || userInp < 1){
+		return getUserInput(currentPlayer);
+	}
+
+	return userInp;
+}
+
 int main(){
 	Board board;
 	int currentPlayer = 1;
-	int userInp;
 	board.drawBoard();
 
 	while(board.getIngame()){
@@ -219,13 +230,7 @@ int main(){
 			currentPlayer = 1;
 		}
 
-		cout << "Player " << currentPlayer << ", choose a block: ";
-		scanf("%d", &userInp);
-
-
-		cout << endl;
-		cout << endl;
-		board.playGame(userInp);
+		board.playGame(getUserInput(currentPlayer));
 	}
 
 	return 0;
