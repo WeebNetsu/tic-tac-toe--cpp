@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stdio.h>
+#include <stdio.h> // to use scanf()
 
 using namespace std;
 
@@ -224,7 +224,7 @@ int main(){
 
 
 		cout << endl;
-			cout << endl;
+		cout << endl;
 		board.playGame(userInp);
 	}
 
