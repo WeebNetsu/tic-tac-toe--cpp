@@ -183,7 +183,7 @@ class Board{
 				}
 
 				//checks sideways-right
-				if(getRow(0, 1) == player && getRow(1, 1) == player && getRow(2, 2) == player){
+				if(getRow(0, 0) == player && getRow(1, 1) == player && getRow(2, 2) == player){
 					return playerNumber;
 				}
 
